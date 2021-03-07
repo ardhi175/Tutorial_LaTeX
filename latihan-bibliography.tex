@@ -1,0 +1,90 @@
+\documentclass[a4paper]{book}
+
+\usepackage[colorlinks=true,linkcolor=blue,urlcolor=blue,citecolor=blue]{hyperref}
+\usepackage[bahasa]{babel} 
+\usepackage{indentfirst}
+\usepackage[nottoc]{tocbibind} 
+
+\usepackage[round]{natbib}
+
+%\renewcommand{\chaptername}{BAB}
+%\renewcommand{\bibname}{Daftar Pustaka}
+
+%% https://github.com/ardhi175
+
+\begin{document}
+\tableofcontents
+
+\chapter{Pendahuluan}
+
+\section{Latar Belakang}
+
+Blog : \url{https://mmfvlogs.blogspot.com}
+
+Youtube : \url{https://youtube.com/c/MMFVlogs}
+
+Ini pakai cite : Menurut \cite{Beiser2002-jh} dan \cite{Arfken2005-ce} dan \cite{Greiner2000-ks}
+
+Ini pakai citet : Menurut \citet{Beiser2002-jh} dan \citet{Arfken2005-ce} dan \citet{Greiner2000-ks}
+
+Ini pakai citep : Menurut \citep{Beiser2002-jh} dan \citep{Arfken2005-ce} dan \citep{Greiner2000-ks}
+
+Ini pakai citealt : Menurut \citealt{Beiser2002-jh} dan \citealt{Arfken2005-ce} dan \citealt{Greiner2000-ks}
+
+Ini pakai citealp : Menurut \citealp{Beiser2002-jh} dan \citealp{Arfken2005-ce} dan \citealp{Greiner2000-ks}
+
+Ini pakai cite* : Menurut \cite*{Beiser2002-jh} dan \cite*{Arfken2005-ce} dan \cite*{Greiner2000-ks}
+
+Ini pakai citet* : Menurut \citet*{Beiser2002-jh} dan \citet*{Arfken2005-ce} dan \citet*{Greiner2000-ks}
+
+Ini pakai citep* : Menurut \citep*{Beiser2002-jh} dan \citep*{Arfken2005-ce} dan \citep*{Greiner2000-ks}
+
+Ini pakai citealt* : Menurut \citealt*{Beiser2002-jh} dan \citealt{Arfken2005-ce} dan \citep*{Greiner2000-ks}
+
+Ini pakai citealp* : Menurut \citealp*{Beiser2002-jh} dan \citealp*{Arfken2005-ce} dan \citealp*{Greiner2000-ks}
+
+% style bisa diganti-ganti, lihat keterangan di bawah
+\bibliographystyle{abbrvnat}
+\bibliography{daftarpustaka.bib}
+
+\end{document}
+
+
+%% Prosedur menggenerate bibliography setiap setelah mengganti style :
+%% -------------------------------------------------------------------
+%% 1. Dari file utama, run Quick Build 1x
+%% 2. Dari file utama, run BibTex 1x
+%% 3. Dari file utama, run Quick Build 2x
+
+%% Keterangan package yang dipakai :
+%% ---------------------------------
+%% \usepackage{indentfirst} : untuk memberikan indentasi pada setiap paragraf pertama setiap section
+%% \usepackage[nottoc]{tocbibind} %untuk menambahkan bibliography pada daftar isi
+%% \usepackage[]{natbib} : Memberikan tambahan mode sitasi : \citet,\citep,\citealt,\citealp, dll. Untuk lebih jauh penggunaan natbib, silahkan rujuk ke alamat : http://merkel.texture.rocks/Latex/natbib.php
+%% \usepackage[colorlinks=true,linkcolor=blue,urlcolor=blue,citecolor=blue]{hyperref} : membuat hyperlink untuk referensi
+
+
+%% Keterangan \newcommand :
+%% ------------------------
+%% \renewcommand{\chaptername}{BAB} : untuk mengubah "<Chapter Name>" menjadi "BAB"
+%% \renewcommand{\bibname}{Daftar Pustaka} : untuk mengubah "<Bibliography Name>" menjadi "Daftar Pustaka"
+
+%% Keterangan mode sitasi yang disediakan natbib :
+%% -----------------------------------------------
+%% \citet : textual citation
+%% \citep : parenthetical citation
+%% \citealt : citet tanpa kurung
+%% \citealp : citep tanpa kurung
+%% \citet* : \citet* versi nama  > 2 ditulis semua, bukan et.al
+%% \citep* : \citep* versi nama  > 2 ditulis semua, bukan et.al
+%% \citealt* : \citealt* versi nama > 2 ditulis semua, bukan et.al
+%% \citealp* : \citealt* versi nama  > 2 ditulis semua, bukan et.al
+
+
+%% Jenis-jenis style bibliography yang dapat digunakan :
+%% -----------------------------------------------------
+%% plain, abbrv, acm, alpha, apalike, ieeetr, siam, unsrt
+
+%% Style bibliography yang kompatibel dengan natbib : 
+%% --------------------------------------------------
+%% plainnat, abbrvnat, unsrtnat
